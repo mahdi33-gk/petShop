@@ -28,9 +28,41 @@ btnAdder();
 const displayPets = () => {
     fetch('https://openapi.programming-hero.com/api/peddy/pets')
     .then(res => res.json())
-    .then(data => console.log(data.pets))
+    .then(data =>showsPets(data.pets))
 }
-displayPets()
-const showsPets = (id) => {
 
+const showsPets = (id) => {
+    for( let item of id){
+        const cardContainer = document.getElementById('cards-container');
+        const div = document.createElement('div');
+        div.className = 'card card-compact col-span-3 md:col-span-1 px-5 py-3 border-borderCard border-2';
+        div.innerHTML =` 
+        <figure>
+          <img class="p-2"
+            src="${item.image}" />
+        </figure>
+        <div class="card-body">
+           <div class="border-b-2 border-borderCard pb-3">
+                <h2 class="font-bold text-[20px] mb-1">${item.pet_name}</h2>
+                <p><i class="fa-solid mr-1 fa-credit-card"></i> Breed: ${item.breed}</p>
+                <p><i class="fa-solid mr-2 fa-calendar-days"></i>   Birth: ${item.date_of_birth}</p>
+                <p><i class="fa-solid mr-1 fa-venus-mars"></i> Gender: ${item.gender}</p>
+                <p><i class="mr-3 fa-solid fa-dollar-sign"></i> Price: ${item.price}</p>
+           </div>
+           <div>
+
+           </div>
+          
+            <div class="flex gap-3 px-2 justify-between items-center">
+                <a class="border-2 border-borderCl px-3 py-1 rounded-md w-auto h-auto"><i class="fa-solid fa-thumbs-up"></i></a>
+                <a class="font-bold border-2 border-borderCl px-3 py-1 rounded-md text-primaryBg w-auto h-auto">Adopt</a>
+                <a class="font-bold border-2 border-borderCl px-3 py-1 rounded-md text-primaryBg w-auto h-auto">Details</a>
+            </div>
+            
+          
+        </div>
+        `;
+        cardContainer.append(div);
+    }
 }
+displayPets();
