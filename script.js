@@ -53,10 +53,10 @@ const showsPets = (id) => {
 
            </div>
           
-            <div class="flex gap-3 px-2 justify-between items-center">
-                <a class="border-2 border-borderCl px-3 py-1 rounded-md w-auto h-auto"><i class="fa-solid fa-thumbs-up"></i></a>
-                <a class="font-bold border-2 border-borderCl px-3 py-1 rounded-md text-primaryBg w-auto h-auto">Adopt</a>
-                <a class="font-bold border-2 border-borderCl px-3 py-1 rounded-md text-primaryBg w-auto h-auto">Details</a>
+            <div class="flex gap-3 px-2 justify-between max-w-screen-sm">
+                <a class="border-2 cursor-pointer border-borderCl px-3 py-1 rounded-md w-auto h-auto"><i class="fa-solid fa-thumbs-up"></i></a>
+                <a class="font-bold cursor-pointer border-2 border-borderCl px-3 py-1 rounded-md text-primaryBg w-auto h-auto">Adopt</a>
+                <a class="font-bold cursor-pointer border-2 border-borderCl px-3 py-1 rounded-md text-primaryBg w-auto h-auto">Details</a>
             </div>
             
           
