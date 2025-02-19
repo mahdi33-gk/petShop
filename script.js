@@ -20,4 +20,15 @@ const btnShower = (id) => {
         
     });
 }
-btnAdder()
+btnAdder();
+
+
+// display all pets
+const displayPets = () => {
+    fetch('https://openapi.programming-hero.com/api/peddy/pets')
+    .then(res => res.json())
+    .then(data =>console.log(data))
+}
+const showsPets = (id) => {
+
+}
