@@ -24,9 +24,17 @@ const btnShower = (id) => {
 btnAdder();
 // load data by category
 const loadcategoryData = (category) => {
+    const cardContainer = document.getElementById('cards-container');
+    cardContainer.innerHTML = ''
+    loadingSpinner(true);
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
     .then(res => res.json())
-    .then(data => showsPets(data.data))
+    .then(data => {
+        setTimeout(() => {
+            showsPets(data.data);
+            loadingSpinner(false)
+        },2000)
+    })
 }
 
 
