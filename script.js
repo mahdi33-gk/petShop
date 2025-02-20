@@ -37,7 +37,14 @@ const displayPets = () => {
     loadingSpinner(true);
     fetch('https://openapi.programming-hero.com/api/peddy/pets')
     .then(res => res.json())
-    .then(data =>showsPets(data.pets))
+    .then(data => {
+        setTimeout(() => {
+            showsPets(data.pets);
+            loadingSpinner(false)
+        },2000)
+    })
+
+   
 }
 
 const showsPets = (id) => {
