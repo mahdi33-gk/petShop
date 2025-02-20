@@ -3,6 +3,7 @@ const btnAdder = () =>{
     .then(res => res.json())
     .then(data =>btnShower(data.categories))
 }
+
 const btnShower = (id) => {
     const btnContainer = document.getElementById('btn-container');
     id.forEach(btn => {
