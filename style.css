@@ -1,0 +1,9 @@
+.categoryBtn{
+    background-color: rgb(14, 122, 129);
+    color: white;
+    border-radius: 33px;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    -ms-border-radius: 33px;
+    -o-border-radius: 33px;
+}

@@ -11,7 +11,7 @@ const btnShower = (id) => {
         const div = document.createElement('div');
         div.className = ""
         div.innerHTML = `
-        <button onclick="loadcategoryData('${btn.category}')" class="btn px-3 flex justify-center items-center md:px-14 border-borderCl py-1 md:py-3 h-auto">
+        <button onclick="loadcategoryData('${btn.category}')" class="btn categoryBtn px-3 flex justify-center items-center md:px-14 border-borderCl py-1 md:py-3 h-auto">
             <img class="w-10 md:w-auto" src="${btn.category_icon}" alt="">
             <p class="font-semibold md:text-4 text-sm">${btn.category}</p>
 
