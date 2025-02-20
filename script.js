@@ -39,8 +39,10 @@ const displayPets = () => {
 }
 
 const showsPets = (id) => {
+    const cardContainer = document.getElementById('cards-container');
+    cardContainer.innerHTML = ''
+    
     for( let item of id){
-        const cardContainer = document.getElementById('cards-container');
         const div = document.createElement('div');
         div.className = 'card card-compact col-span-3 md:col-span-1 px-5 py-3 border-borderCard border-2';
         div.innerHTML =` 
